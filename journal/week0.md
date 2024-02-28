@@ -55,13 +55,13 @@ These are factors held as true for the planning & implementation phases
 - Document everything (you can't remember everything. Visual copies help!)
 
 *** TOGAF - Most popular framework for Enterprise Architecture (EA) ***
-The Open Group Architectural Forum developed the TOGAF Standard for Enterprise Architecture which encompasses all of business activities and capabilities, information, and technology that make up the entire infrastructure and governance of the enterprise, or to one or more specific areas of interest within the enterprise. An enterprise may include partners, suppliers, and customers as well as internal business units. In all cases, the architecture crosses multiple systems, and multiple functional groups within the enterprise. [url](https://pubs.opengroup.org/togaf-standard/index.html)
+The Open Group Architectural Forum developed the TOGAF Standard for Enterprise Architecture which encompasses all of business activities and capabilities, information, and technology that make up the entire infrastructure and governance of the enterprise, or to one or more specific areas of interest within the enterprise. An enterprise may include partners, suppliers, and customers as well as internal business units. In all cases, the architecture crosses multiple systems, and multiple functional groups within the enterprise. [Read More](https://pubs.opengroup.org/togaf-standard/index.html)
 
 AWS Well-Architected Tool aligns with TOGAF 
 
 
 ## The 4 C Model
-The following are the 4 C's of Visualizing Software Architecture: Context, Containers, Components, and Code. [url](https://c4model.com)
+The following are the 4 C's of Visualizing Software Architecture: Context, Containers, Components, and Code. [Learn More](https://c4model.com)
 
 ### Context
 
