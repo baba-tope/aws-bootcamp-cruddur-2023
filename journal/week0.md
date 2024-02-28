@@ -1,9 +1,8 @@
 # User Personas
-
-
-
-
-
+Product Owner - continuity and context
+Web Development Group - current state
+Investors - cost and timing
+CTO - technical requirements and future state
 
 
 # Good Architecture
