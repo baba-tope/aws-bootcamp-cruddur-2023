@@ -73,7 +73,26 @@ The following are the 4 C's of Visualizing Software Architecture: Context, Conta
 
 # Week 0 — Billing and Architecture
 
+## Billing
 You can use the `aws cli` or the AWS Billing and Cost Management console to create a Budget and set up billing alarms.
+
+## *AWS CLI*
+### Install AWS CLI
+Gitpod would be launched to use AWS CLI to send Bash commands to AWS. Following the [AWS CLI Install instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), update the `.gitpod.yml` to include the following task:
+```
+task:
+  - name: aws-cli
+    env:
+      AWS_CLI_AUTO_PROMPT: on-partial
+    init:
+      cd /workspace
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+      cd $THEIA_WORKSPACE_ROOT
+```
+
+
 
 ## AWS Organizations, IAM, and IAM Identity Center
 
