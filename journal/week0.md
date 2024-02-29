@@ -72,3 +72,9 @@ The following are the 4 C's of Visualizing Software Architecture: Context, Conta
 
 
 # Week 0 — Billing and Architecture
+
+In the AWS Billing and Cost Management console, create a simplified Budget with billing alerts.
+
+
+
+
