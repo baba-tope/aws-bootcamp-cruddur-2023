@@ -75,5 +75,8 @@ The following are the 4 C's of Visualizing Software Architecture: Context, Conta
 
 You can use the `aws cli` or the AWS Billing and Cost Management console to create a Budget and set up billing alarms.
 
-AWS Organizations, IAM, and IAM Identity Center
+## AWS Organizations, IAM, and IAM Identity Center
+
+Login to AWS Management console as the root user (email address) then navigate to the `AWS Organizations` console to enable the service and create an organization.
+
 
