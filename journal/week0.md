@@ -73,12 +73,50 @@ The following are the 4 C's of Visualizing Software Architecture: Context, Conta
 
 # Week 0 — Billing and Architecture
 
-## Billing
-You can use the `aws cli` or the AWS Billing and Cost Management console to create a Budget and set up billing alarms.
+## IAM
+Navigate to the [IAM User groups Console](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-2#/groups)
+1. Create a group named `Privileged_Service_Accounts`
+2. Attach the `PowerUserAccess` and `Billing` policies to the group*
+3. Create a user named `Gitpod` and add it to the group
+4. Click on [Users](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-2#/users), click on the newly created user
+5. Click on `Security Credentials` then `Create Access Key` for programmatic access.
+6. Choose `Command Line Interface (CLI)`, confirm and download the CSV with the credentials.
 
-## *AWS CLI*
+> It is best to use least privilege when assigning permissions 
+
+
+## Billing
+You can use the `aws cli` or the AWS Billing and Cost Management console to create a Budget and set up billing alarms. 
+Activate the Gitpod Workspace from the repo, install the AWS CLI, then set the budget and billing alarms programmatically. 
+
 ### Install AWS CLI
-Gitpod would be launched to use AWS CLI to send Bash commands to AWS. Following the [AWS CLI Install instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), update the `.gitpod.yml` to include the following task:
+Gitpod would be launched to use AWS CLI to send Bash commands to AWS. Follow the [AWS CLI Install instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to install via the terminal.
+```sh
+cd /workspace
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+cd $THEIA_WORKSPACE_ROOT
+```
+
+
+### Set Environment Variables
+From the Gitpod terminal, set the AWS credentials:
+```sh
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_DEFAULT_REGION=us-east-1
+```
+
+To make the Gitpod workspaces to be persistent at launch, pass them as environment variables:
+```sh
+gp env AWS_ACCESS_KEY_ID=""
+gp env AWS_SECRET_ACCESS_KEY=""
+gp env AWS_DEFAULT_REGION=us-east-1
+```
+
+Update the `.gitpod.yml` to include the following task:
+
 ```
 tasks:
   - name: aws-cli
@@ -92,6 +130,8 @@ tasks:
       cd $THEIA_WORKSPACE_ROOT
 ```
 
+
+> Ensure the GitHub repo reflects the changes make to the `.gitpod.yml` file.
 
 
 ## AWS Organizations, IAM, and IAM Identity Center
